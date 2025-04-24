@@ -180,7 +180,7 @@ body {
     width: 100%;
     height: 1080px;
     top: -100px;
-    background-image: url(/img/lookfirstbc.jpg);
+    background-image: url(img/lookfirstbc.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: center;
