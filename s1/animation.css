@@ -1,0 +1,326 @@
+/* Temel animasyonlar */
+@keyframes socacc {
+    0% { scale: 0; }
+    100% { scale: 1.1; }
+}
+
+@keyframes left {
+    0% { left: -100%; }
+    100% { left: 0; }
+}
+
+@keyframes right {
+    0% { left: 100%; }
+    100% { left: 0; }
+}
+
+.left { animation: left 1s alternate; }
+.right { animation: right 1s alternate; }
+
+/* Büyük ekranlar (1200px'e kadar) */
+@media (max-width: 1200px) {
+    .menu ul li {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .container {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        max-width: 100%;
+    }
+
+    .firstext {
+        width: 100%;
+        max-width: 100%;
+        height: 1200px;
+        flex-direction: column;
+        top: 0;
+        align-items: normal;
+    }
+
+    .kwtext1 {
+        width: 100%;
+        max-width: 90%;
+        height: 520px;
+        margin: 0;
+    }
+
+    .kwtext1 h1 { font-size: 22px; }
+    .kwtext1 p { font-size: 19px; }
+}
+
+/* Orta ekranlar (768px'e kadar) */
+@media (max-width: 768px) {
+    /* Menü ve navigasyon */
+    #mnu { display: none; }
+    
+    #socialaccres {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        right: 0;
+        width: 40%;
+    }
+    
+    #socialaccres i {
+        color: #fff;
+        background-color: black;
+        border-radius: 50%;
+    }
+    
+    #logo {
+        display: block;
+        top: 60px;
+    }
+    
+    #dropdownmnu {
+        display: block;
+        position: sticky;
+        margin-top: -60px;
+        width: 100%;
+    }
+    
+    #dropdownmnu ul li a { font-size: 15px; }
+    
+    /* Container ve görsel düzen */
+    #container {
+        width: 100%;
+        height: 1080px;
+        position: absolute;
+        flex-direction: column;
+        background-size: cover;
+        background-position: -40lvw;
+        background-repeat: no-repeat;
+    }
+    
+    #container h1 { font-size: 32px; }
+    #container p {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    
+    /* Göç bölümü */
+    #göç {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    #kwtext1 {
+        width: 100%;
+        margin: 0;
+    }
+    
+    #kwtext1 h1 {
+        font-size: 24px;
+        padding: 0;
+    }
+    
+    #kwtext1 p {
+        width: inherit;
+        font-size: 19px;
+    }
+    
+    #kwimg {
+        width: 95%;
+        height: 520px;
+    }
+    
+    #kwimg img { width: 100%; }
+    
+    /* Why bölümü */
+    #why { width: 100%; }
+    
+    #whyin {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    #whyin1, #whyin2 {
+        width: 100%;
+        flex-direction: column;
+        margin: 10px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    #whyin2 { border: none; }
+    
+    #whyin1 h1, #whyin2 h1 {
+        text-emphasis: none;
+        width: 100%;
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    /* Knwhy bölümü */
+    #knwhy {
+        max-width: 100%;
+        margin-top: 100px;
+    }
+    
+    #knwhy h1 { font-size: 35px; }
+    
+    #knw {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #knw ul li {
+        width: 100%;
+        font-size: 13px;
+        margin: 0;
+    }
+    
+    #knw img {
+        max-width: 100%;
+        height: 300px;
+    }
+    
+    /* IRR metin bölümleri */
+    #neden, #irrtext1, #irrtext2 { width: 100%; }
+    
+    #irrtext1, #irrtext2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    
+    #irrtext1 img, #irrtext2 img {
+        width: 90%;
+        height: 300px;
+        margin: 10px 0;
+    }
+    
+    #irrin, #irrin2 {
+        width: 100%;
+        height: 300px;
+        margin: 0;
+        flex-direction: column;
+    }
+    
+    #irrin { font-size: 12px; }
+    #irrin h1, #irrin2 h1 { font-size: 18px; }
+    
+    #irrin p, #irrin2 p {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        max-width: 100%;
+    }
+    
+    #irrin p { font-size: 11px; }
+    
+    #irrin2 {
+        align-items: start;
+        font-size: 12px;
+    }
+    
+    #span {
+        left: 0;
+        top: 0;
+    }
+    
+    /* Bölümler */
+    #uti, #ekonomik, #demografik, #kültür {
+        max-width: 100%;
+        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #uti h1 { font-size: 40px; }
+    
+    #uti section, #ekonomik section, #demografik section, #kültür section { width: 100%; }
+    
+    #ekonomik h1, #demografik h1, #kültür h1 { font-size: 34px; }
+    
+    /* Çizelge ve düzensiz bölümleri */
+    #cizelge {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 100px;
+    }
+    
+    #cizelge h1 {
+        font-size: 24px;
+        max-width: 100%;
+    }
+    
+    #düzensiz { width: 100%; }
+    
+    #düzensiz h2 { font-size: 25px; }
+    
+    #düzensiz #ft {
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    #düzensiz ul li {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    #düzensizimg { width: 100%; }
+    #düzensizimg img { width: 100%; }
+}
+
+/* Küçük ekranlar (480px'e kadar) */
+@media (max-width: 480px) {
+    /* Container */
+    #container {
+        background-position: -90lvw;
+    }
+    
+    /* Metin boyutları */
+    #kwtext1 p { font-size: 16px; }
+    
+    #knwhy h1 { font-size: 28px; }
+    
+    #uti h1 { font-size: 26px; }
+    
+    #ekonomik h1, #demografik h1, #kültür h1 { font-size: 23px; }
+    
+    #ekonomik ul li, #demografik ul li, #kültür ul li { font-size: 15px; }
+    
+    /* Görsel boyutları */
+    #kwimg {
+        height: 420px;
+    }
+    
+    #knw img {
+        height: 200px;
+    }
+    
+    #irrtext1 img, #irrtext2 img {
+        width: 100%;
+        height: 200px;
+    }
+    
+    #irrin, #irrin2 {
+        height: auto;
+        font-size: 10px;
+    }
+    
+    #irrin h1, #irrin2 h1 { font-size: 16px; }
+    #irrin p, #irrin2 p { font-size: 12px; }
+    
+    /* Çizelge ve düzensiz */
+    #cizelge h1 { font-size: 14px; }
+    
+    #düzensiz h2 { font-size: 16px; }
+    
+    #düzensiz #ft { font-size: 16px; }
+    
+    #düzensiz ul li { font-size: 14px; }
+    
+    /* Genel başlık */
+    h1 { font-size: 16px; }
+}
