@@ -180,7 +180,7 @@ body {
     width: 100%;
     height: 1080px;
     top: -100px;
-    background-image: url(/img/lookfirstbc.jpg);
+    background-image: url(/img/immgc.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: center;
@@ -189,32 +189,41 @@ body {
     font-family: var(--text);
 }
 
+.container section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: brightness(75%);
+    backdrop-filter: brightness(75%);
+}
+
 .container h1 {
-    color: white;
-    font-size: 99px;
+    color: rgb(255, 255, 255);
+    font-size: 90px;
     font-family: 'Lucida Sans', sans-serif;
     text-align: center;
     z-index: 5;
+    margin-bottom: 20px;
 }
 
 .container p {
-    color: white;
-    margin-bottom: 200px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 190px;
     font-size: 27px;
     font-weight: bolder;
     font-family: 'Lucida Sans', sans-serif;
     text-align: center;
     z-index: 56;
 }
-
 .container p::after {
     content: "";
     position: absolute;
     background-color: rgb(255, 0, 0);
     height: 3px;
-    width: 100%;
-    left: 0;
-    bottom: -5px;
+    width: 35%;
+    left:460px;
+    bottom: 550px;
+    transition: all 0.5s ease-in-out;
 }
 
 #svgha {
@@ -227,7 +236,7 @@ body {
 
 #svgha span {
     position: absolute;
-    color: white;
+    color: rgb(0, 0, 0);
     bottom: 200px;
     font-size: 17px;
     font-weight: bolder;
@@ -476,7 +485,8 @@ body {
     color: white;
 }
 
-.irrtext1, .irrtext2 {
+.irrtext1,
+.irrtext2 {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -491,7 +501,8 @@ body {
     margin-top: 50px;
 }
 
-.irrin, .irrin2 {
+.irrin,
+.irrin2 {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -502,18 +513,21 @@ body {
     font-family: var(--text);
 }
 
-.irrin h1, .irrin2 h1 {
+.irrin h1,
+.irrin2 h1 {
     font-size: 35px;
     margin: 20px;
 }
 
-.irrin p, .irrin2 p {
+.irrin p,
+.irrin2 p {
     width: 750px;
     border-left: 3px solid white;
     padding: 20px;
 }
 
-.irrtext1 img, .irrtext2 img {
+.irrtext1 img,
+.irrtext2 img {
     position: relative;
     width: 600px;
     height: 420px;
@@ -624,36 +638,52 @@ body {
     .menu ul {
         display: none;
     }
-    
+
     .socialaccres {
         display: flex;
     }
-    
+
     .dropdownmenu {
         display: flex;
     }
-    
+
     .container h1 {
         font-size: 60px;
     }
-    
-    .firstext, .why, .Knowledge, .utility, .irregulertext, .çizelge {
+
+    .firstext,
+    .why,
+    .Knowledge,
+    .utility,
+    .irregulertext,
+    .çizelge {
         height: auto;
         padding: 40px 0;
     }
-    
-    .kwtext1, .kwimg, .whyin1, .whyin2, .knwh, .ekonomik, .demografik, .kültür, .irrin, .irrin2 {
+
+    .kwtext1,
+    .kwimg,
+    .whyin1,
+    .whyin2,
+    .knwh,
+    .ekonomik,
+    .demografik,
+    .kültür,
+    .irrin,
+    .irrin2 {
         width: 90%;
         height: auto;
     }
-    
-    .irrtext1, .irrtext2 {
+
+    .irrtext1,
+    .irrtext2 {
         flex-direction: column;
         width: 90%;
         height: auto;
     }
-    
-    .irrtext1 img, .irrtext2 img {
+
+    .irrtext1 img,
+    .irrtext2 img {
         width: 90%;
         height: auto;
     }
