@@ -447,7 +447,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 3px solid white;
     border-radius: 22px;
     padding: 20px;
 }
@@ -457,6 +456,12 @@ body {
 .kültür h1 {
     font-size: 32px;
     margin-bottom: 5px;
+}
+
+.ekonomik h3,
+.demografik h3,
+.kültür h3{
+    margin-left: 25px;
 }
 
 .ekonomik section,
@@ -596,13 +601,8 @@ body {
     font-size: 18px;
     width: 650px;
     padding: 15px;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0);
     text-align: start;
-}
-
-.düzensiz ul li:last-child {
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
 }
 
 .düzensiz ul li::before {
@@ -616,7 +616,6 @@ body {
 
 .düzensiz h2 {
     font-size: 25px;
-    border: 1px solid white;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     margin-top: 30px;
