@@ -1,689 +1,268 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
-:root {
-    --text: "Roboto Mono", serif;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(0, 0, 0);
-    overflow-x: hidden;
-}
-
-/* Navigation menu */
-.menu {
-    display: flex;
-    position: sticky;
-    top: 0;
-    background-color: #85c1e900;
-    height: 85px;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-}
-
-.menu.aftermenu {
-    background-color: rgba(0, 0, 0, 0.767);
-}
-
-.menu.aftermenu ul li a {
-    color: white;
-}
-
-.logo {
-    display: flex;
-    position: relative;
-    margin-left: 50px;
-    width: 75px;
-    height: 75px;
-    border-radius: 16px;
-    z-index: 998;
-    cursor: pointer;
-}
-
-.logo img {
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
-    border-radius: 16px;
-}
-
-.menu ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-}
-
-.menu ul li {
-    margin: 0 20px;
-    padding: 15px 20px;
-}
-
-.menu ul li a {
-    display: flex;
-    position: relative;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-family: var(--text);
-    font-weight: bold;
-    font-size: 17px;
-    letter-spacing: 0.5px;
-    padding: 15px 5px;
-    transition: all 0.5s;
-}
-
-.menu ul li a:hover {
-    scale: 1.2;
-}
-
-.menu ul li a::after {
-    content: "";
-    position: absolute;
-    background-color: red;
-    height: 3px;
-    width: 0;
-    left: 0;
-    bottom: 10px;
-    transition: all 0.5s ease-in-out;
-}
-
-.menu ul li a:hover:after {
-    width: 100%;
-}
-
-/* Mobile menu */
-.socialaccres {
-    display: none;
-    position: sticky;
-    top: 20px;
-    margin: 0 0 0 auto;
-    width: 150px;
-    z-index: 999;
-    justify-content: space-around;
-}
-
-.socialaccres i {
-    text-decoration: none;
-    right: 0;
-    font-size: 35px;
-    margin: 5px;
-    transition: all 0.4s ease-in-out;
-}
-
-.socialaccres i:hover {
-    scale: 1.1;
-}
-
-.dropdownmenu {
-    display: none;
-    position: sticky;
-    top: 0;
-    background-color: #4a6679b6;
-    width: 500px;
-    height: 0;
-    overflow: hidden;
-    flex-direction: column;
-    z-index: 998;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.dropdownmenu ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.dropdownmenu ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dropdownmenu ul li a {
-    text-decoration: none;
-    color: rgb(107, 255, 156);
-    font-family: var(--text);
-    font-weight: bold;
-    font-size: 17px;
-    letter-spacing: 0.5px;
-    padding: 15px 5px;
-    transition: all 0.5s;
-}
-
-.dropdownmenu ul li a:hover {
-    scale: 1.2;
-}
-
-.dropdownmenu.open {
-    height: 210px;
-}
-
-/* Hero container */
-.container {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    width: 100%;
-    height: 1080px;
-    top: -100px;
-    background-image: url(/img/immgc.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    justify-content: center;
-    align-items: center;
-    z-index: 6;
-    font-family: var(--text);
-}
-
-.container section {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backdrop-filter: brightness(75%);
-    backdrop-filter: brightness(75%);
-}
-
-.container h1 {
-    color: rgb(255, 255, 255);
-    font-size: 90px;
-    font-family: 'Lucida Sans', sans-serif;
-    text-align: center;
-    z-index: 5;
-    margin-bottom: 20px;
-}
-
-.container p {
-    color: rgb(255, 255, 255);
-    margin-bottom: 190px;
-    font-size: 27px;
-    font-weight: bolder;
-    font-family: 'Lucida Sans', sans-serif;
-    text-align: center;
-    z-index: 56;
-}
-.container p::after {
-    content: "";
-    position: absolute;
-    background-color: rgb(255, 0, 0);
-    height: 3px;
-    width: 35%;
-    left:460px;
-    bottom: 550px;
-    transition: all 0.5s ease-in-out;
-}
-
-#svgha {
-    display: flex;
-    position: absolute;
-    background-color: transparent;
-    top: 480px;
-    z-index: 996;
-}
-
-#svgha span {
-    position: absolute;
-    color: rgb(0, 0, 0);
-    bottom: 200px;
-    font-size: 17px;
-    font-weight: bolder;
-    font-family: 'Lucida Sans', sans-serif;
-    text-align: center;
-    cursor: pointer;
-}
-
-#svgha span a {
-    color: rgb(0, 132, 255);
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-/* Content sections */
-.firstext {
-    display: flex;
-    position: relative;
-    margin-top: 1080px;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-    background-color: rgb(0, 0, 0);
-    height: 1200px;
-    overflow-x: hidden;
-}
-
-.kwtext1 {
-    display: flex;
-    position: relative;
-    color: white;
-    flex-direction: column;
-    font-size: 27px;
-    font-family: var(--text);
-    margin-left: 50px;
-    width: 900px;
-    height: 520px;
-}
-
-.kwtext1 h1 {
-    padding: 22.5px;
-}
-
-.kwtext1 p {
-    font-size: 19px;
-    margin-top: 25px;
-    width: 75%;
-    padding: 25px;
-    border-left: 3px solid white;
-    box-shadow: -10px 15px 15px lightblue;
-}
-
-.kwimg {
-    display: flex;
-    position: relative;
-    width: 762px;
-    overflow: hidden;
-    height: 530px;
-    justify-content: end;
-    align-items: center;
-}
-
-.kwimg img {
-    position: relative;
-    width: 775px;
-    height: 90%;
-    object-fit: cover;
-}
-
-.kwimg span {
-    position: absolute;
-    color: white;
-    bottom: 0;
-    font-size: 17px;
-    font-weight: bolder;
-    font-family: 'Lucida Sans', sans-serif;
-    text-align: center;
-}
-
-.kwimg span a {
-    color: rgb(0, 132, 255);
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-/* Why section */
-.why {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    width: 100%;
-    height: 600px;
-    margin-top: 100px;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(0, 0, 0);
-}
-
-.why h1 {
-    font-size: 55px;
-    font-family: 'Lucida Sans', sans-serif;
-    color: rgb(255, 255, 255);
-    margin-bottom: 60px;
-}
-
-.whyin {
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 500px;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.whyin h1 {
-    font-size: 30px;
-}
-
-.whyin1,
-.whyin2 {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    width: 657px;
-    height: 400px;
-    align-items: center;
-    font-family: var(--text);
-    font-size: 18px;
-    color: rgb(255, 255, 255);
-}
-
-.whyin2 {
-    border-left: 2px solid white;
-    padding-left: 40px;
-}
-
-/* Knowledge section */
-.Knowledge {
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 2360px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-}
-
-.Knowledge h1 {
-    position: relative;
-    font-size: 55px;
-    margin-bottom: 35px;
-}
-
-.knwh {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    width: 100%;
-    height: 645px;
-    flex-direction: row;
-    color: aliceblue;
-    margin: 20px;
-    padding: 20px;
-    font-size: 20px;
-    font-family: var(--text);
-}
-
-.knwh ul {
-    margin: 25px;
-}
-
-.knwh ul li {
-    width: 572px;
-    margin: 25px;
-}
-
-.knwh img {
-    width: 466px;
-    height: 575px;
-    object-fit: cover;
-}
-
-/* Utility section */
-.utility {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 2390px;
-    flex-direction: column;
-    color: white;
-    font-family: var(--text);
-}
-
-.utility h1 {
-    font-size: 64px;
-    margin-bottom: 85px;
-}
-
-.ekonomik,
-.demografik,
-.kültür {
-    display: flex;
-    margin-top: 70px;
-    width: 890px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 22px;
-    padding: 20px;
-}
-
-.ekonomik h1,
-.demografik h1,
-.kültür h1 {
-    font-size: 32px;
-    margin-bottom: 5px;
-}
-
-.ekonomik h3,
-.demografik h3,
-.kültür h3{
-    margin-left: 25px;
-}
-
-.ekonomik section,
-.demografik section,
-.kültür section {
-    margin: 20px;
-    width: 850px;
-}
-
-.ekonomik ul li,
-.demografik ul li,
-.kültür ul li {
-    margin: 15px;
-    font-size: 18px;
-}
-
-/* Irregular text section */
-.irregulertext {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 1350px;
-    flex-direction: column;
-    color: white;
-}
-
-.irrtext1,
-.irrtext2 {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    width: 1400px;
-    height: 500px;
-    margin-bottom: 50px;
-}
-
-.irrtext2 {
-    margin-top: 50px;
-}
-
-.irrin,
-.irrin2 {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    width: 750px;
-    height: 460px;
-    font-family: var(--text);
-}
-
-.irrin h1,
-.irrin2 h1 {
-    font-size: 35px;
-    margin: 20px;
-}
-
-.irrin p,
-.irrin2 p {
-    width: 750px;
-    border-left: 3px solid white;
-    padding: 20px;
-}
-
-.irrtext1 img,
-.irrtext2 img {
-    position: relative;
-    width: 600px;
-    height: 420px;
-    margin-top: 40px;
-    border-radius: 26px;
-    object-fit: cover;
-}
-
-.irregulertext hr {
-    width: 100%;
-    height: 1px;
-    background-color: white;
-    margin: 20px;
-}
-
-/* Chart section */
-.çizelge {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 3000px;
-    flex-direction: column;
-    color: white;
-    margin-bottom: 50px;
-}
-
-.çizelge h1 {
-    font-size: 39px;
-    margin: 20px;
-}
-
-.düzensiz {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 1057px;
-    height: 800px;
-    margin: 0;
-    font-size: 18px;
-    font-family: var(--text);
-}
-
-.last {
-    height: 500px;
-}
-
-.düzensiz #ft {
-    font-size: 28px;
-    font-weight: bolder;
-    width: 1150px;
-    text-shadow: 2px 2px rgba(255, 0, 0, 0.562);
-    text-align: center;
-    margin-bottom: 55px;
-}
-
-.düzensiz ul {
-    list-style: none;
-    margin: 0;
-}
-
-.düzensiz ul li {
-    font-size: 18px;
-    width: 650px;
-    padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0);
-    text-align: start;
-}
-
-.düzensiz ul li::before {
-    content: '•';
-    position: relative;
-    left: -12px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.düzensiz h2 {
-    font-size: 25px;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-    margin-top: 30px;
-    padding: 15px;
-}
-
-.düzensizimg {
-    display: flex;
-    position: relative;
-    width: 100%;
-    border-radius: 26px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    .menu ul {
-        display: none;
-    }
-
-    .socialaccres {
-        display: flex;
-    }
-
-    .dropdownmenu {
-        display: flex;
-    }
-
-    .container h1 {
-        font-size: 60px;
-    }
-
-    .firstext,
-    .why,
-    .Knowledge,
-    .utility,
-    .irregulertext,
-    .çizelge {
-        height: auto;
-        padding: 40px 0;
-    }
-
-    .kwtext1,
-    .kwimg,
-    .whyin1,
-    .whyin2,
-    .knwh,
-    .ekonomik,
-    .demografik,
-    .kültür,
-    .irrin,
-    .irrin2 {
-        width: 90%;
-        height: auto;
-    }
-
-    .irrtext1,
-    .irrtext2 {
-        flex-direction: column;
-        width: 90%;
-        height: auto;
-    }
-
-    .irrtext1 img,
-    .irrtext2 img {
-        width: 90%;
-        height: auto;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Göç Ve Uyum Sağlamak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="menu" id="mnu">
+        <div class="logo" id="logo">
+            <a href=""><img src="/img/tr.jpg" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="#göç">Göç Nedir?</a></li>
+            <li><a href="#knwhy">Göçün Nedenleri</a></li>
+            <li><a href="#neden">Göçmenlerin Yaşadığı Sıkıntılar</a></li>
+            <li><a href="#kacak">Adaptasyon</a></li>
+        </ul>
+    </nav>
+
+    <div class="socialaccres" id="socialaccres">
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+
+    <div class="dropdownmenu" id="dropdownmnu">
+        <ul>
+            <li><a href="#göç">Göç Nedir?</a></li>
+            <li><a href="#knwhy">Göçün Nedenleri</a></li>
+            <li><a href="#neden">Göçmenlerin Yaşadığı Sıkıntıları</a></li>
+            <li><a href="#kacak">Kaçak Göçmenler</a></li>
+        </ul>
+    </div>
+
+    <div class="container" id="container" data-aos="fade-up" data-aos-duration="1200">
+        <section></section>
+        <h1>Göç Ve Uyum Sağlamak</h1>
+        <p>Her insan Aynı Şartlarda Yaşamıyor!</p>
+    </div>
+
+    <div id="svgha">
+        <span>Designed by <a href="https://www.freepik.com" target="_blank">Freepik</a></span>
+        <img src="/img/wave-haikei.svg" alt="">
+    </div>
+    
+    <div class="firstext" id="göç">
+        <div class="kwtext1" id="kwtext1">
+            <h1>-Göç Nedir?</h1>
+            <p>Göç, bireylerin ya da toplulukların çeşitli sebeplerle yaşadıkları yerden başka bir yere hareket etmesi
+                olarak tanımlanır. Tarih boyunca insanlar daha iyi yaşam koşulları, güvenlik, iş fırsatları ya da doğal
+                afetlerden kaçmak gibi çeşitli nedenlerle göç etmişlerdir. Göç, bireysel ya da kitlesel olarak
+                gerçekleşebilir ve bazen ülkeler arasında, bazen de bir ülkenin içinde yaşanır.</p>
+        </div>
+        <div id="kwimg" class="kwimg">
+            <img src="/img/fimg.jpg" alt="">
+            <span>Designed by <a href="https://www.freepik.com">jcomp from Freepik</a></span>
+        </div>
+    </div>
+
+    <div class="why" id="why">
+        <h1>Göç Türleri</h1>
+        <div class="whyin" id="whyin">
+            <div class="whyin1" id="whyin1">
+                <h1>İç Göç</h1>
+                <p>Bir ülke sınırları içinde bireylerin veya grupların bir bölgeden başka bir bölgeye taşınmasıdır.
+                    Genellikle ekonomik, sosyal veya doğal afet nedenleriyle gerçekleşir. Örneğin, köyden kente göç
+                    yaygın bir iç göç türüdür.</p>
+            </div>
+            <div class="whyin2" id="whyin2">
+                <h1>Dış Göç</h1>
+                <p>Bir ülkeden başka bir ülkeye yapılan göçlerdir. Daha iyi yaşam koşulları, iş fırsatları veya güvenlik
+                    arayışı gibi nedenlerle gerçekleşir. Mülteci göçleri buna örnek gösterilebilir.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="Knowledge" id="knwhy">
+        <h1>Her Göç Aynı Değildir!</h1>
+        <div class="knwh" id="knw" data-aos="fade-left" data-aos-duration="1900">
+            <ul>
+                <h3>1. Ekonomik Nedenler</h3>
+                <li>Birçok insan, ekonomik refah düzeyini artırmak amacıyla göç eder. İşsizlik, düşük ücretler ve iş
+                    imkânlarının sınırlı olması gibi faktörler, bireyleri daha iyi bir yaşam standardı sunan ülkelere
+                    göçe zorlar. Özellikle genç nüfus, kariyerlerini geliştirmek ve daha iyi çalışma koşulları bulmak için
+                    ekonomik olarak gelişmiş ülkelere yönelir.</li>
+            </ul>
+            <img src="/img/Wavy_Lst-17_Single-07.jpg" alt="">
+        </div>
+        <div class="knwh" id="knw" data-aos="fade-right" data-aos-duration="1900">
+            <img src="/img/knowledge2.jpg" alt="">
+            <ul>
+                <h3>2. Eğitim ve Daha İyi Yaşam Fırsatları</h3>
+                <li>Eğitim ve kişisel gelişim fırsatları, insanların göç etmesine neden olan bir diğer önemli faktördür.
+                    Yüksek kaliteli eğitim almak, kendini geliştirmek ve daha iyi bir yaşam sürmek isteyen bireyler,
+                    genellikle gelişmiş ülkelere yönelir. Özellikle üniversite eğitimi için yurt dışına çıkan gençler,
+                    kendilerini daha donanımlı hale getirerek daha iyi kariyer olanaklarına ulaşmayı hedefler.</li>
+            </ul>
+        </div>
+        <div class="knwh" id="knw" data-aos="fade-left" data-aos-duration="1900">
+            <ul>
+                <h3>3. Savaş ve Şiddet</h3>
+                <li>Savaş ve şiddet, en zorlayıcı göç nedenlerinden biridir. İnsanlar, yaşadıkları bölgedeki savaşlardan
+                    veya iç çatışmalardan kaçmak için başka ülkelere sığınmak zorunda kalabilirler. Bu tür göç, zorunlu
+                    göç olarak bilinir ve genellikle sığınmacı veya mülteci statüsünde gerçekleşir.</li>
+            </ul>
+            <img src="/img/knowledge3.webp" alt="">
+        </div>
+    </div>
+
+    <div class="utility" id="uti">
+        <h1>Göçmenlerin Faydaları</h1>
+        <div class="ekonomik" id="ekonomik">
+            <h1>1.Ekonomik Katkılar</h1>
+            <section>
+                <h3>Ülkemize Yönelik:</h3>
+                <p>İşgücü Piyasasının Desteklenmesi: Göçmenler, genellikle yerel iş gücünün dolduramadığı iş alanlarında
+                    çalışır. Tarım, inşaat, sağlık ve hizmet sektörü gibi birçok alanda göçmen işgücüne talep yüksektir.</p>
+            </section>
+            <section>
+                <h3>Dünya Çapında:</h3>
+                <ul>
+                    <li>İşgücü Piyasasının Desteklenmesi: Göçmenler, genellikle yerel iş gücünün dolduramadığı iş alanlarında
+                        çalışır.</li>
+                    <li>Girişimcilik: Göçmenler, kendi işlerini kurarak yeni istihdam alanları yaratır ve ekonomiyi canlandırır.</li>
+                    <li>Vergi Gelirleri: Göçmenlerin çalışmaları sayesinde devlet vergi gelirlerini artırır.</li>
+                    <li>Yenilik ve Teknoloji: Göçmenler, yeni fikirler ve beceriler getirerek inovasyonun öncüsü olabilir.</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="demografik" id="demografik">
+            <h1>2.Demografik Canlanma</h1>
+            <section>
+                <h3>Dünya Çapında:</h3>
+                <ul>
+                    <li>Nüfus Dengesine Katkı: Birçok gelişmiş ülkede yaşlanan nüfus, ekonomik büyüme ve sosyal güvenlik
+                        sistemlerini tehdit eder. Göçmenler, daha genç bir iş gücü sağlayarak nüfus dengesini iyileştirir.</li>
+                    <li>Doğum Oranlarının Artışı: Göçmen aileler, genellikle yerli nüfusa göre daha yüksek doğum
+                        oranlarına sahiptir, bu da nüfus azalmasını önleyebilir</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="kültür" id="kültür">
+            <h1>3.Kültürel Zenginlik</h1>
+            <section>
+                <h3>Dünya Çapında:</h3>
+                <ul>
+                    <li>Çeşitlilik: Göçmenler, kültürel zenginlikleriyle toplumları daha renkli ve çeşitli hale getirir.
+                        Yemekler, müzik, sanat ve festivaller gibi alanlarda yeni kültürel unsurlar getirirler.</li>
+                    <li>Daha Açık Bir Toplum: Göçmenlerin varlığı, yerel halkın farklı kültürlere karşı daha hoşgörülü
+                        ve açık fikirli olmasına katkıda bulunabilir.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <div class="irregulertext" id="neden">
+        <div class="irrtext1" id="irrtext1">
+            <div class="irrin" id="irrin">
+                <h1>Göçmenlerin Yaşadığı Sıkıntılar</h1>
+                <p>Göçmenler, gittikleri ülkelerde yeni bir yaşam kurmaya çalışırken çeşitli zorluklarla karşılaşırlar.
+                    Dil
+                    engelleri, kültürel farklılıklar, ekonomik sıkıntılar ve sosyal uyum süreci, göçmenler için başa
+                    çıkılması
+                    gereken temel sorunlar arasında yer alır. Bununla birlikte, göçmenlerin geldikleri toplumlara
+                    kazandırdığı
+                    katkılar da yadsınamaz. Farklı yetenekler, bilgi birikimi ve iş gücü ile bulundukları topluma katkı
+                    sağlarlar; yeni kültürel öğeler getirerek toplumsal zenginliği artırırlar.
+                    Göçmenlerin topluma uyum sağlamaları süreci iki taraflı bir etkileşim gerektirir. Hem göçmenlerin
+                    uyum
+                    çabaları hem de ev sahibi toplumun bu kişilere yönelik kabul edici, destekleyici politikaları bu
+                    süreçte
+                    önemli rol oynar. Bu etkileşimle birlikte farklı kültürlerin bir araya gelmesi, toplumlarda
+                    hoşgörüyü ve
+                    kültürel çeşitliliği destekler.</p>
+            </div>
+            <img src="/img/uyum.jpg" alt="">
+            <span id="span">
+                <p>Designed by</p>
+                <a href="https://www.freepik.com/free-photo/family-is-trip-station_1935397.htm#fromView=search&page=2&position=2&uuid=f3d48853-ad70-43ab-bec3-aefc99785734"
+                    target="_blank">Freepik</a>
+            </span>
+        </div>
+        <hr id="kacak">
+        <div class="irrtext2" id="irrtext2">
+            <img src="/img/war.webp" alt="">
+            <div class="irrin2" id="irrin2">
+                <h1>Göçmenlerin Adaptasyon</h1>
+                <p>
+                    Göçmenlerin yeni bir topluma adaptasyonu (entegrasyonu), hem bireylerin hem de gittikleri ülkenin
+                    toplumu için önemli bir süreçtir. Adaptasyon, göçmenlerin yeni kültüre uyum sağlamasını, toplumla
+                    etkileşim kurmasını ve topluma katkıda bulunmasını içerir. Bu süreç bazı zorlukları barındırsa da
+                    doğru politikalar ve destek mekanizmalarıyla başarıyla yönetilebilir. Dil öğrenimi,
+                    eğitim,istihdam,toplumsal kabul,psikolojik destek,kültürel anlayış gibi faktörler
+                    göçmenlerin adaptasyon sürecini etkiler. Toplumsal etkinlikler ve göçmenler için kültürel
+                    değişim,dil ve uyum kursları
+                    gibi etkinlikler adaptasyon sürecini hızlandırabilir.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="cizelge" class="çizelge">
+        <h1>Düzensiz Göçün Yarattığı Düzensizlik</h1>
+        <div class="düzensiz" id="düzensiz">
+            <p id="ft">- Düzensiz göç, bir ülkeye yasal yollarla giriş yapılmadan veya yasal süreler aşılarak
+                gerçekleşen göç
+                türüdür. Bu durum, hem göçmenler hem de ev sahibi ülkeler için çeşitli zorluklar ve düzensizlikler
+                yaratabilir!</p>
+            <h2>İşte düzensiz göçün neden olduğu başlıca sorunlar:</h2>
+            <ul>
+                <h2>1. Hukuki ve İdari Düzensizlikler</h2>
+                <li>Kayıt Dışı Göçmenler: Düzensiz göçmenlerin çoğu kayıt altına alınmadığından, nüfus sayımları ve kamu
+                    hizmetlerinin planlanması zorlaşır.</li>
+                <li>Kimlik Doğrulama Sorunları: Düzensiz göçmenlerin kimlik belgeleri olmaması veya sahte belgeler
+                    kullanması, güvenlik ve yasal işlemleri karmaşık hale getirebilir.</li>
+                <li>Yasal Belirsizlikler: Düzensiz göçmenlerin hakları konusunda yasal boşluklar, hem göçmenleri hem de
+                    ev sahibi ülkeleri zor durumda bırakır.</li>
+            </ul>
+        </div>
+
+        <div class="düzensiz last" id="düzensiz">
+            <ul>
+                <h2>2. Ekonomik Etkiler</h2>
+                <li>Kayıt Dışı İstihdam: Düzensiz göçmenler, genellikle düşük ücretli ve güvencesiz işlerde
+                    çalıştırılır. Bu durum, hem işçi sömürüsüne hem de yerel iş gücü piyasasında haksız rekabete yol
+                    açabilir.</li>
+                <li>Vergi Geliri Eksikliği: Düzensiz göçmenler kayıt dışı çalıştıkları için vergi sistemine katkı
+                    sağlamazlar, bu da kamu kaynaklarının etkili bir şekilde kullanılmasını zorlaştırır.</li>
+                <li>Sosyal Yardım Talepleri: Düzensiz göçmenlerin sağlık ve eğitim gibi hizmetlerden yasal hakları
+                    olmamasına rağmen yararlanmaya çalışmaları, kamu hizmetlerinde yük oluşturabilir.</li>
+            </ul>
+        </div>
+        <div class="düzensiz last" id="düzensiz">
+            <ul>
+                <h2>3. Sosyal ve Toplumsal Sorunlar</h2>
+                <li>Toplumda Önyargılar ve Ayrımcılık: Düzensiz göçmenlerin varlığı, yerel halk arasında kültürel
+                    çatışmalara ve önyargılara neden olabilir. Bu durum, sosyal uyumu zayıflatır.</li>
+                <li>Suistimal ve İnsan Kaçakçılığı: Düzensiz göçmenler, insan kaçakçıları ve suç örgütleri tarafından
+                    istismar edilebilir. Güvencesiz statüleri nedeniyle kötü koşullarda yaşamak zorunda kalabilirler.
+                </li>
+                <li>Gettolaşma: Düzensiz göçmenler, ekonomik sıkıntılar nedeniyle belirli bölgelerde yoğunlaşabilir ve
+                    bu durum sosyal dışlanmaya yol açabilir.</li>
+            </ul>
+        </div>
+
+        <div class="düzensizimg" id="düzensizimg">
+            <h1>Türkiye 2005-2024 arası Düzensiz Göçmen Çizelgesi</h1>
+            <img src="/img/goc.png" alt="">
+        </div>
+    </div>
+
+    
+
+    <script src="/node_modules/aos/dist/aos.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
