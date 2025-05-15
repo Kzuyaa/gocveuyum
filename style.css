@@ -687,3 +687,84 @@ body {
         height: auto;
     }
 }
+@media (max-width: 480px) {
+  .container h1 {
+    font-size: 40px;
+    padding: 0 10px;
+  }
+
+  .container p {
+    font-size: 18px;
+    margin-bottom: 100px;
+  }
+
+  .container p::after {
+    display: none;
+  }
+
+  .menu {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .logo {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .kwtext1 p {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .knwh {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .knwh img {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .irrtext1,
+  .irrtext2 {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .irrin p,
+  .irrin2 p {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .düzensiz {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .düzensiz #ft {
+    width: 90%;
+    font-size: 22px;
+  }
+
+  .düzensiz ul li {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .dropdownmenu {
+    width: 100%;
+  }
+
+  .dropdownmenu ul li a {
+    font-size: 16px;
+  }
+
+  .socialaccres i {
+    font-size: 28px;
+  }
+}
