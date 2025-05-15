@@ -950,7 +950,7 @@ body {
     
     .düzensiz h2 { font-size: 25px; }
     
-     #ft {
+    .düzensiz .ft {
         width: 100%;
         font-size: 18px;
     }
@@ -1011,7 +1011,7 @@ body {
     
     .düzensiz h2 { font-size: 16px; }
     
-    .düzensiz #ft { font-size: 16px; }
+    .düzensiz .ft { font-size: 16px; }
     
     .düzensiz ul li { font-size: 14px; }
     
