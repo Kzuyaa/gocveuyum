@@ -746,7 +746,7 @@ body {
 /* Orta ekranlar (768px'e kadar) */
 @media (max-width: 768px) {
     /* Menü ve navigasyon */
-    .mnu { display: none; }
+    .menu { display: none; }
     
     .socialaccres {
         display: flex;
@@ -757,7 +757,7 @@ body {
     }
     
     .socialaccres i {
-        color: .fff;
+        color: #fff;
         background-color: black;
         border-radius: 50%;
     }
@@ -767,14 +767,14 @@ body {
         top: 60px;
     }
     
-    .dropdownmnu {
+    .dropdownmenu {
         display: block;
         position: sticky;
         margin-top: -60px;
         width: 100%;
     }
     
-    .dropdownmnu ul li a { font-size: 15px; }
+    .dropdownmenu ul li a { font-size: 15px; }
     
     /* Container ve görsel düzen */
     .container {
@@ -794,7 +794,8 @@ body {
     }
     
     /* Göç bölümü */
-    .göç {
+    
+    .firstext{
         width: 100%;
         flex-direction: column;
     }
@@ -848,33 +849,33 @@ body {
     }
     
     /* Knwhy bölümü */
-    .knwhy {
+    .Knowledge {
         max-width: 100%;
         margin-top: 100px;
     }
     
-    .knwhy h1 { font-size: 35px; }
+    .Knowledge h1 { font-size: 35px; }
     
-    .knw {
+    .knwh {
         width: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     
-    .knw ul li {
+    .knwh ul li {
         width: 100%;
         font-size: 13px;
         margin: 0;
     }
     
-    .knw img {
+    .knwh img {
         max-width: 100%;
         height: 300px;
     }
     
     /* IRR metin bölümleri */
-    .neden, .irrtext1, .irrtext2 { width: 100%; }
+    .irregulertext, .irrtext1, .irrtext2 { width: 100%; }
     
     .irrtext1, .irrtext2 {
         flex-direction: column;
@@ -919,7 +920,7 @@ body {
     }
     
     /* Bölümler */
-    .uti, .ekonomik, .demografik, .kültür {
+    .utility, .ekonomik, .demografik, .kültür {
         max-width: 100%;
         margin: 0;
         flex-direction: column;
@@ -927,9 +928,9 @@ body {
         align-items: center;
     }
     
-    .uti h1 { font-size: 40px; }
+    .utility h1 { font-size: 40px; }
     
-    .uti section, .ekonomik section, .demografik section, .kültür section { width: 100%; }
+    .utility section, .ekonomik section, .demografik section, .kültür section { width: 100%; }
     
     .ekonomik h1, .demografik h1, .kültür h1 { font-size: 34px; }
     
@@ -974,9 +975,9 @@ body {
     /* Metin boyutları */
     .kwtext1 p { font-size: 16px; }
     
-    .knwhy h1 { font-size: 28px; }
+    .Knowledge h1 { font-size: 28px; }
     
-    .uti h1 { font-size: 26px; }
+    .utility h1 { font-size: 26px; }
     
     .ekonomik h1, .demografik h1, .kültür h1 { font-size: 23px; }
     
@@ -987,7 +988,7 @@ body {
         height: 420px;
     }
     
-    .knw img {
+    .Knowledge img {
         height: 200px;
     }
     
