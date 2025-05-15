@@ -950,7 +950,7 @@ body {
     
     .düzensiz h2 { font-size: 25px; }
     
-    .düzensiz .ft {
+    .düzensiz #ft {
         width: 100%;
         font-size: 18px;
     }
@@ -963,6 +963,7 @@ body {
     
     .düzensizimg { width: 100%; }
     .düzensizimg img { width: 100%; }
+
 }
 
 /* Küçük ekranlar (480px'e kadar) */
@@ -1010,7 +1011,7 @@ body {
     
     .düzensiz h2 { font-size: 16px; }
     
-    .düzensiz .ft { font-size: 16px; }
+    .düzensiz #ft { font-size: 16px; }
     
     .düzensiz ul li { font-size: 14px; }
     
