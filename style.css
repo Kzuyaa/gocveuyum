@@ -750,6 +750,8 @@ body {
     
     .socialaccres {
         display: flex;
+         position: sticky;
+        top: 0;
         justify-content: end;
         align-items: end;
         right: 0;
@@ -769,6 +771,8 @@ body {
     
     .dropdownmenu {
         display: flex;
+          position: sticky;
+    top: 0;    
         margin-top: -60px;
         width: 100%;
     }
