@@ -856,20 +856,20 @@ body {
     
     .Knowledge h1 { font-size: 35px; }
     
-    .knwh {
+    .Knowledge {
         width: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     
-    .knwh ul li {
+    .Knowledge ul li {
         width: 100%;
         font-size: 13px;
         margin: 0;
     }
     
-    .knwh img {
+    .Knowledge img {
         max-width: 100%;
         height: 300px;
     }
